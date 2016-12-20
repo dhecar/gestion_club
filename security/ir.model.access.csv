@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_adh_gerant,adh.adh,model_adherent_adherent,club.group_gerant,1,1,1,1
+access_insc_gerant,insc.insc,model_insc_insc,club.group_gerant,1,1,1,1
+access_act_gerant,act.act,model_activite_activite,club.group_gerant,1,1,1,1
+access_point_gerant,point.point,model_point_point,club.group_gerant,1,1,1,1
