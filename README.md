@@ -10,7 +10,7 @@ for details.
 
 Required dependencies
 ---------------------
- - An ODOO version 7 environment.
+ - An ODOO version 8 environment.
 
 =======================
 -------------------------------------
