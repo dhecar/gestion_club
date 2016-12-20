@@ -1,0 +1,789 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* club
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-29 19:49+0000\n"
+"PO-Revision-Date: 2016-08-29 19:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: club
+#: view:insc.insc:club.view_insc_calendar
+#: model:ir.actions.act_window,name:club.insc_for_adh_donne
+#: view:point.point:club.view_point_search_form
+msgid "Abonnement"
+msgstr "الاشتراك"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+#: view:adherent.adherent:club.view_adherent_adherent_form
+msgid "Abonnement(s)"
+msgstr "اشتراك"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_search_form
+#: view:insc.insc:club.view_insc_insc_tree
+#: model:ir.actions.act_window,name:club.action_isnc_insc
+#: model:ir.actions.act_window,name:club.action_isnc_insc_inactif
+msgid "Abonnements"
+msgstr "الاشتراكات"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:139
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:162
+#, python-format
+msgid "Account"
+msgstr "الحساب"
+
+#. module: club
+#: selection:adherent.adherent,etat:0
+msgid "Actif"
+msgstr "نشيط"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_search_form
+msgid "Actifs"
+msgstr "نشطاء"
+
+#. module: club
+#: model:ir.actions.act_window,name:club.action_activite_activite
+#: view:website:club.report_adherent
+msgid "Activite"
+msgstr "نشاط"
+
+#. module: club
+#: model:ir.ui.menu,name:club.gest_act
+msgid "Activité"
+msgstr "نشاط"
+
+#. module: club
+#: model:ir.actions.act_window,name:club.action_adherent_adherent
+#: model:ir.actions.report.xml,name:club.adherent_adherent_report
+#: model:ir.ui.menu,name:club.gest_adh
+msgid "Adherent"
+msgstr "مشترك"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Adresse:"
+msgstr "عنوان:"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Age:"
+msgstr "السن:"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:138
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:172
+#, python-format
+msgid "Amount"
+msgstr "Amount"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:54
+#, python-format
+msgid "Back to statements list"
+msgstr "Back to statements list"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:8
+#, python-format
+msgid "Bank statements are fully reconciled."
+msgstr "Bank statements are fully reconciled."
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Cin:"
+msgstr "رقم البطاقة الوطنية:"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:55
+#, python-format
+msgid "Close the statement"
+msgstr "Close the statement"
+
+#. module: club
+#: field:adherent.adherent,color:0
+msgid "Color Index"
+msgstr "اللون"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_form
+msgid "Contact"
+msgstr "Contact"
+
+#. module: club
+#: field:activite.activite,create_uid:0
+#: field:adherent.adherent,create_uid:0
+#: field:insc.insc,create_uid:0
+#: field:point.point,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: club
+#: field:activite.activite,create_date:0
+#: field:adherent.adherent,create_date:0
+#: field:insc.insc,create_date:0
+#: field:point.point,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:134
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:165
+#, python-format
+msgid "Date"
+msgstr "Date"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Date de début"
+msgstr "تاريخ البدء"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Date de fin"
+msgstr "تاريخ النهاية"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+msgid "Delete"
+msgstr "مسح"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:137
+#, python-format
+msgid "Description"
+msgstr "تفصيل"
+
+#. module: club
+#: field:activite.activite,display_name:0
+#: field:adherent.adherent,display_name:0
+#: field:insc.insc,display_name:0
+#: field:point.point,display_name:0
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:166
+#, python-format
+msgid "Due Date"
+msgstr "Due Date"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+msgid "Edit..."
+msgstr "تغيير..."
+
+#. module: club
+#: selection:adherent.adherent,sexe:0
+msgid "Femme"
+msgstr "انثى"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_search_form
+msgid "Femmes"
+msgstr "اناث"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:101
+#, python-format
+msgid "Filter"
+msgstr "Filter"
+
+#. module: club
+#: model:res.groups,name:club.group_gerant
+msgid "Gerant"
+msgstr "مسير"
+
+#. module: club
+#: model:ir.module.category,name:club.group_gerant_cat
+msgid "Gerant_category"
+msgstr "Gerant_category"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:8
+#, python-format
+msgid "Good Job!"
+msgstr "Good Job!"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_reconciliation.xml:8
+#, python-format
+msgid "Good job!"
+msgstr "Good job!"
+
+#. module: club
+#: selection:adherent.adherent,sexe:0
+msgid "Homme"
+msgstr "رجل"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_search_form
+msgid "Hommes"
+msgstr "رجال"
+
+#. module: club
+#: field:activite.activite,id:0
+#: field:adherent.adherent,id:0
+#: field:insc.insc,id:0
+#: field:point.point,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: club
+#: selection:adherent.adherent,etat:0
+msgid "Inactif"
+msgstr "Inactif"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_search_form
+msgid "Inactifs"
+msgstr "الغير نشطاء"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:43
+#, python-format
+msgid "It took you"
+msgstr "It took you"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:163
+#, python-format
+msgid "Journal"
+msgstr "Journal"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_line_quickadd.xml:14
+#, python-format
+msgid "Journal :"
+msgstr "Journal :"
+
+#. module: club
+#: field:activite.activite,__last_update:0
+#: field:adherent.adherent,__last_update:0
+#: field:insc.insc,__last_update:0
+#: field:point.point,__last_update:0
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: club
+#: field:activite.activite,write_uid:0
+#: field:adherent.adherent,write_uid:0
+#: field:insc.insc,write_uid:0
+#: field:point.point,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: club
+#: field:activite.activite,write_date:0
+#: field:adherent.adherent,write_date:0
+#: field:insc.insc,write_date:0
+#: field:point.point,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_reconciliation.xml:24
+#, python-format
+msgid "Latest Manual Reconciliation Processed:"
+msgstr "Latest Manual Reconciliation Processed:"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Le montant payé"
+msgstr "المبلغ الدفوع"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Le reste"
+msgstr "الباقي"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_form
+#: field:adherent.adherent,inscription:0
+#: view:insc.insc:club.view_insc_insc_form
+#: model:ir.ui.menu,name:club.gest_insc
+#: model:ir.ui.menu,name:club.idssousmenuabn
+#: model:ir.ui.menu,name:club.sub
+msgid "Les abonnements"
+msgstr "الاشتراكات"
+
+#. module: club
+#: model:ir.ui.menu,name:club.idssousmenuact
+msgid "Les activités"
+msgstr "الانشطة"
+
+#. module: club
+#: model:ir.ui.menu,name:club.idssousmenu
+msgid "Les adherents"
+msgstr "المشتركين"
+
+#. module: club
+#: model:ir.ui.menu,name:club.gest_insc_inactif
+msgid "Les abonnements expirés"
+msgstr "الاشتراكات المنتهية"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:113
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:122
+#, python-format
+msgid "No result matching '"
+msgstr "No result matching '"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+msgid "Nom :"
+msgstr "النسب :"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Nom:"
+msgstr "النسب:"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:140
+#, python-format
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_reconciliation.xml:31
+#, python-format
+msgid "Nothing more to reconcile"
+msgstr "Nothing more to reconcile"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_form
+msgid "N° de la CIN"
+msgstr "رقم البطاقة الوطنية"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:21
+#, python-format
+msgid "OK"
+msgstr "OK"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:196
+#, python-format
+msgid "Open balance"
+msgstr "Open balance"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:135
+#, python-format
+msgid "Partner"
+msgstr "Partner"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:164
+#, python-format
+msgid "Period"
+msgstr "Period"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_line_quickadd.xml:8
+#, python-format
+msgid "Period :"
+msgstr "Period :"
+
+#. module: club
+#: field:adherent.adherent,point:0
+#: model:ir.actions.act_window,name:club.action_pointage
+#: model:ir.actions.act_window,name:club.point_for_adh_donne
+#: model:ir.model,name:club.model_point_point
+#: model:ir.ui.menu,name:club.gest_point
+#: model:ir.ui.menu,name:club.idssousmenupoint
+msgid "Pointage"
+msgstr "التوقيعات اليومية"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_form
+msgid "Pointage(s)"
+msgstr "التوقيعات اليومية"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_form
+msgid "Pointages"
+msgstr "التوقيعات اليومية"
+
+#. module: club
+#: field:insc.insc,point:0
+msgid "Pontage"
+msgstr "التوقيع اليومي"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Prenom:"
+msgstr "الاسم:"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+msgid "Prénom :"
+msgstr "الاسم :"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_reconciliation.xml:30
+#, python-format
+msgid "Reconcile"
+msgstr "Reconcile"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:172
+#, python-format
+msgid "Residual"
+msgstr "Residual"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Reste"
+msgstr "الباقي"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:35
+#, python-format
+msgid "Show more... ("
+msgstr "Show more... ("
+
+#. module: club
+#: field:activite.activite,tarif:0
+#: view:website:club.report_adherent
+msgid "Tarif"
+msgstr "الثمن"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:43
+#, python-format
+msgid "That's on average"
+msgstr "That's on average"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_move_reconciliation.xml:10
+#, python-format
+msgid "There is nothing to reconcile. All invoices and payments\n"
+"                    have been reconciled, your partner balance is clean."
+msgstr "There is nothing to reconcile. All invoices and payments\n"
+"                    have been reconciled, your partner balance is clean."
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:9
+#, python-format
+msgid "This page displays all the bank transactions that are to be reconciled and provides with a neat interface to do so."
+msgstr "This page displays all the bank transactions that are to be reconciled and provides with a neat interface to do so."
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:36
+#, python-format
+msgid "Tip : Hit ctrl-enter to reconcile all balanced items."
+msgstr "Tip : Hit ctrl-enter to reconcile all balanced items."
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:168
+#: view:website:club.report_adherent
+#, python-format
+msgid "Total"
+msgstr "المجموع"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:136
+#, python-format
+msgid "Transaction"
+msgstr "Transaction"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+msgid "Téléphone :"
+msgstr "الهاتف :"
+
+#. module: club
+#: view:website:club.report_adherent
+msgid "Téléphone:"
+msgstr "الهاتف:"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:68
+#, python-format
+msgid "You must balance the reconciliation"
+msgstr "You must balance the reconciliation"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:45
+#, python-format
+msgid "You validated"
+msgstr "You validated"
+
+#. module: club
+#: view:insc.insc:club.view_insc_search_form
+msgid "abonnements"
+msgstr "الاشتراكات"
+
+#. module: club
+#: model:ir.model,name:club.model_activite_activite
+msgid "activite"
+msgstr "الانشطة"
+
+#. module: club
+#: view:activite.activite:club.view_activite_activite_form
+#: view:activite.activite:club.view_activite_activite_tree
+msgid "activite.activite"
+msgstr "activite.activite"
+
+#. module: club
+#: view:activite.activite:club.view_activite_activite_form
+msgid "activites"
+msgstr "الانشطة"
+
+#. module: club
+#: model:ir.model,name:club.model_adherent_adherent
+msgid "adherent"
+msgstr "المسترك"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_tree
+msgid "adherent.adherent"
+msgstr "adherent.adherent"
+
+#. module: club
+#: field:adherent.adherent,adresse:0
+msgid "adresse"
+msgstr "العنوان"
+
+#. module: club
+#: field:adherent.adherent,age:0
+msgid "age"
+msgstr "السن"
+
+#. module: club
+#: field:adherent.adherent,cin:0
+msgid "cin"
+msgstr "رقم البطاقة الوطنية"
+
+#. module: club
+#: view:adherent.adherent:club.resource_kanban_view
+msgid "cin :"
+msgstr "رقم البطاقة الوطنية :"
+
+#. module: club
+#: model:ir.ui.menu,name:club.menu
+msgid "club sportif"
+msgstr "النادي الرياضي"
+
+#. module: club
+#: field:point.point,date:0
+msgid "date"
+msgstr "التاريخ"
+
+#. module: club
+#: field:insc.insc,date_debut:0
+msgid "date de debut"
+msgstr "تاريخ البدء"
+
+#. module: club
+#: field:insc.insc,date_fin:0
+msgid "date de fin"
+msgstr "تاريخ النهاية"
+
+#. module: club
+#: field:adherent.adherent,etat:0
+#: field:insc.insc,etat:0
+msgid "etat"
+msgstr "الحالة"
+
+#. module: club
+#: view:insc.insc:club.view_insc_search_form
+msgid "his insc"
+msgstr "his insc"
+
+#. module: club
+#: view:insc.insc:club.view_insc_insc_form
+msgid "insc.insc"
+msgstr "insc.insc"
+
+#. module: club
+#: model:ir.model,name:club.model_insc_insc
+msgid "inscription"
+msgstr "الاشتراك"
+
+#. module: club
+#: field:point.point,insc_id:0
+msgid "l'abonnement"
+msgstr "الاشتراك"
+
+#. module: club
+#: field:insc.insc,act_id:0
+msgid "l'activite"
+msgstr "النشاط"
+
+#. module: club
+#: field:insc.insc,adh_id:0
+#: field:point.point,adh_id:0
+msgid "l'adherent"
+msgstr "المشترك"
+
+#. module: club
+#: field:adherent.adherent,paye:0
+msgid "le montant payé"
+msgstr "المبلغ المدفوع"
+
+#. module: club
+#: field:activite.activite,nom:0
+msgid "le nom"
+msgstr "النشاط"
+
+#. module: club
+#: field:adherent.adherent,nbr_insc:0
+msgid "le nombre d'inscription"
+msgstr "عدد الاشتراكات"
+
+#. module: club
+#: field:adherent.adherent,reste_tarif:0
+msgid "le reste"
+msgstr "الباقي"
+
+#. module: club
+#: field:adherent.adherent,total:0
+msgid "le total"
+msgstr "المجموع"
+
+#. module: club
+#: view:adherent.adherent:club.view_adherent_adherent_form
+msgid "les abonnements"
+msgstr "الاشتراكات"
+
+#. module: club
+#: field:activite.activite,inscription:0
+msgid "les inscription"
+msgstr "الاشتراكات"
+
+#. module: club
+#: field:adherent.adherent,name:0
+msgid "nom"
+msgstr "النسب"
+
+#. module: club
+#: field:adherent.adherent,photo:0
+msgid "photo"
+msgstr "الصورة"
+
+#. module: club
+#: view:point.point:club.view_point_point_form
+#: view:point.point:club.view_point_point_tree
+msgid "point.point"
+msgstr "point.point"
+
+#. module: club
+#: view:point.point:club.view_point_calendar
+#: view:point.point:club.view_point_point_form
+msgid "pointage"
+msgstr "التوقيع اليومي"
+
+#. module: club
+#: field:adherent.adherent,prenom:0
+msgid "prenom"
+msgstr "الاسم"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:45
+#, python-format
+msgid "reconciliations with the ctrl-enter shortcut."
+msgstr "reconciliations with the ctrl-enter shortcut."
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:35
+#, python-format
+msgid "remaining)"
+msgstr "remaining)"
+
+#. module: club
+#: field:insc.insc,reste:0
+msgid "reste"
+msgstr "الباقي"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:43
+#, python-format
+msgid "seconds per transaction."
+msgstr "seconds per transaction."
+
+#. module: club
+#: field:adherent.adherent,sexe:0
+msgid "sexe"
+msgstr "الجنس"
+
+#. module: club
+#: field:insc.insc,tarif:0
+msgid "tarif"
+msgstr "الثمن"
+
+#. module: club
+#: field:adherent.adherent,telephone:0
+msgid "telephone"
+msgstr "الهاتف"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:43
+#, python-format
+msgid "to reconcile"
+msgstr "to reconcile"
+
+#. module: club
+#. openerp-web
+#: code:addons/club/static/src/xml/account_bank_statement_reconciliation.xml:43
+#, python-format
+msgid "transactions."
+msgstr "transactions."
+
