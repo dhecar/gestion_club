@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_adherent"> <!-- name="club.report_adherent"   -->
+    <t t-call="report.html_container">
+
+        <t t-foreach="docs" t-as="o">
+            <t t-if="o.etat=='actif'">
+               <t t-call="report.external_layout">
+                    <div class="page"> 
+
+                   <br/><br/><br/>
+                       
+                        <div class="row mt32 mb32 ">
+                            <div class="col-xs-2" t-if="o.cin">
+                                <strong>Cin:</strong>
+                                <p t-field="o.cin"/>
+                            </div>
+                            <div class="col-xs-2" t-if="o.name">
+                                <strong>Nom:</strong>
+                                <p t-field="o.name"/>
+                            </div>
+                            <div class="col-xs-2" t-if="o.prenom">
+                                <strong>Prenom:</strong>
+                                <p t-field="o.prenom"/>
+                            </div>
+                            <div class="col-xs-2" t-if="o.age">
+                                <strong>Age:</strong>
+                                <p t-field="o.age"/>
+                            </div>
+                            <div class="col-xs-2" t-if="o.adresse">
+                                <strong>Adresse:</strong>
+                                <p t-field="o.adresse"/>
+                            </div>
+                            <div class="col-xs-2" t-if="o.telephone">
+                                <strong>Téléphone:</strong>
+                                <p t-field="o.telephone"/>
+                            </div>
+                        </div>
+
+                        <br/><br/><br/><br/>
+
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Date de début</th>
+                                    <th>Date de fin</th>
+                                     <th>Activite</th>
+                                    <th class="text-right">Tarif</th>
+                                    <th class="text-right">Reste</th>
+                                </tr>
+                            </thead>
+                            <tbody class="invoice_tbody">
+                                <tr t-foreach="o.inscription" t-as="l">
+                                    <t t-if="l.etat==True">
+                                            <td><span t-field="l.date_debut"/></td>
+                                            <td><span t-field="l.date_fin"/></td>
+                                            <td><span t-field="l.act_id"/></td>
+                                            <td class="text-right">
+                                                <span t-field="l.tarif"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="l.reste"/>
+                                            </td>
+                                    </t>
+                                    <t t-if="l.etat==False and l.reste > 0">
+                                            <td><span t-field="l.date_debut"/></td>
+                                            <td><span t-field="l.date_fin"/></td>
+                                            <td><span t-field="l.act_id"/></td>
+                                            <td class="text-right">
+                                                <span t-field="l.tarif"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="l.reste"/>
+                                            </td>
+                                    </t>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="row">
+                            <div class="col-xs-4 pull-right">
+                                <table class="table table-condensed">
+                                    <tr class="border-black">
+                                        <td><strong>Le montant payé</strong></td>
+                                        <td class="text-right">
+                                            <span t-field="o.paye" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Le reste</td>
+                                        <td class="text-right">
+                                            <san t-field="o.reste_tarif" />
+                                        </td>
+                                    </tr>
+                                    <tr class="border-black">
+                                        <td><strong>Total</strong></td>
+                                        <td class="text-right">
+                                             <span t-field="o.total" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <img t-att-src="'/report/barcode/QR/%s' % 'My text in qr code'"/>
+
+                    </div>
+                    
+                </t>
+            </t>
+                        <t t-if="o.etat=='inactif'">
+                            <t t-call="report.external_layout">
+                                <div class="page"> 
+                                     <br/><br/><br/><br/> <br/><br/><br/><br/> <br/><br/><br/><br/>
+                                     <center><p >adhérent Inactif  </p></center>
+                                </div>
+                            </t>
+                        </t>
+
+
+            </t>
+    </t>
+</template>
+
+</data>
+</openerp>
