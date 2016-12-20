@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report 
+		            id="adherent_adherent_report"
+		            model="adherent.adherent"
+		            string="Adherent"
+		            report_type="qweb-pdf"
+		            name="club.report_adherent"
+		            file="club.report_adherent"
+		            
+		        />
+
+
+	</data>
+</openerp>
