@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+
+ <record id="view_point_search_form" model="ir.ui.view">
+            <field name="name">point.point.search.form</field>
+            <field name="model">point.point</field>
+            <field name="arch" type="xml">
+               <search string="Abonnement">
+                    <field name="adh_id"/>
+                    <separator/>
+                    
+                </search>
+            </field>
+        </record>
+
+
+<record id="point_for_adh_donne" model="ir.actions.act_window">
+            <field name="name">Pointage</field>
+            <field name="res_model">point.point</field>
+            <field name="view_mode">calendar,form</field>
+            <field name="context">{
+                'search_default_adh_id': [active_id],
+                'default_adh_id': active_id,
+                
+            }</field>
+            <field name="search_view_id" ref="view_point_search_form"/>
+</record>
+    <record id="view_insc_search_form" model="ir.ui.view">
+            <field name="name">insc.insc.search.form</field>
+            <field name="model">insc.insc</field>
+            <field name="arch" type="xml">
+               <search string="abonnements">
+                    <field name="date_debut"/>
+                    <field name="adh_id"/>
+                    <field name="act_id"/>
+                    <separator/>
+                    
+                </search>
+            </field>
+        </record>
+    <record id="view_insc_calendar" model="ir.ui.view">
+            <field name="name">insc.insc.calendar</field>
+            <field name="model">insc.insc</field>
+            <field name="type">calendar</field>
+            <field name="arch" type="xml">
+                <calendar string="Abonnement"  date_start="date_debut" date_stop="date_fin" color="adh_id" >
+                  <field name="reste"/>
+                </calendar>
+            </field>
+        </record>
+
+
+          <record id="account_move_line_graph" model="ir.ui.view">
+            <field name="name">insc.insc.graph</field>
+            <field name="model">insc.insc</field>
+            <field name="arch" type="xml">
+                <graph string="Statistiques" type="bar">
+                   <field name="act_id"/>
+                    <field name="tarif_actif" operator="+"/>
+                </graph>
+            </field>
+        </record>
+
+    <record id="insc_for_adh_donne" model="ir.actions.act_window">
+            <field name="name">Abonnement</field>
+            <field name="res_model">insc.insc</field>
+            <field name="view_mode">tree,form,</field>
+            <field name="context">{
+                'search_default_adh_id': [active_id],
+                'default_adh_id': active_id,
+                
+            }</field>
+            <field name="search_view_id" ref="view_insc_search_form"/>
+        </record>
+
+    <record model="ir.ui.view" id="view_insc_insc_form">
+        <field name="name">insc.insc.form</field>
+        <field name="model">insc.insc</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+           <form string="insc.insc">
+                
+                   
+                <sheet>
+                    
+                   <group>
+                  
+                        <div>
+                        <h2><label  string="Les abonnements"/></h2>
+                           <group colspan="4" col="4">
+                               
+                                <field name="date_debut"/>
+                                <field name="date_fin"/>
+                                <field name="tarif"/>
+                                <field name="reste"/>
+                                <field name="act_id"/>
+                                <field name="adh_id"/>
+
+                            </group>
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+
+
+
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_insc_insc_tree">
+        <field name="name">insc.insc.tree</field>
+        <field name="model">insc.insc</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Abonnements" colors="red:etat==False ; green:etat==True" toolbar="1">
+                <field name="act_id"/>
+                <field name="adh_id"/>
+                <field name="date_debut"/>
+                <field name="date_fin"/>
+                <field name="etat" invisible="1"/>
+                <field name="tarif"/>
+                <field name="reste"/>
+            </tree>
+        </field>
+    </record>
+
+    
+    
+    <record model="ir.actions.act_window" id="action_isnc_insc">
+        <field name="name">Abonnements</field>
+        <field name="res_model">insc.insc</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+
+     <record model="ir.actions.act_window" id="action_isnc_insc_inactif">
+        <field name="name">Abonnements</field>
+        <field name="res_model">insc.insc</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('etat', '=',False)]</field>
+    </record>
+
+
+
+  
+
+
+   <record id="view_adherent_adherent_form" model="ir.ui.view">
+        <field name="name">adherent.adherent.form</field>
+        <field name="model">adherent.adherent</field>
+            <field name="arch" type="xml">
+                <form string="Contact">
+                    <header>
+                   <!--           <button name ="draft_act" string='Activer' icon="terp-gtk-go-back-rtl" states ='draft' class='oe_highlight' />
+                            <button name ="act_incat" string='désactiver' icon="terp-gtk-go-back-rtl" states ='active' class='oe_highlight' />
+                            <button name ="inact_act" string='activer' icon="terp-gtk-go-back-rtl" states ='inactive' class='oe_highlight' />
+                            <button name ="inac_arch" string='archiver' icon="terp-gtk-go-back-rtl" states ='inactive' class='oe_highlight' /> -->
+                            <field name="etat" widget="statusbar" statusbar_visible='actif,inactif' />
+ 
+                    </header>
+                <sheet>
+                      <div class="oe_right oe_button_box" name="import_buttons">
+                        <button class="oe_inline oe_stat_button" 
+                                        name="%(insc_for_adh_donne)d"
+                                        type="action"
+                                        help="Les abonnements "
+                                        widget="statinfo" icon="fa-tasks">
+                                         <field string="Abonnement(s)" name="nbr_insc" widget="statinfo"/>
+                        </button>
+
+                       <button class="oe_inline oe_stat_button" 
+                                        name="%(point_for_adh_donne)d"
+                                        type="action"
+                                        string="Pointage(s)"
+                                        help="Pointages"
+                                        widget="statinfo" icon="fa-pencil-square-o">
+                                        
+                        </button>
+                    </div>
+
+
+                    <field name="photo" widget='image' class="oe_avatar oe_left" options='{"preview_image": "photo"}'/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="cin" default_focus="1" placeholder="N° de la CIN" />
+                        </h1>
+                        
+                    </div>
+                    <group colspan="4" col="4">
+                        <field name="name"/>
+                        <field name="prenom"/>
+                        <field name="age"/>
+                        <field name="telephone"/>
+                        <field name="sexe" widget="radio"/>
+                        <field name="adresse"/>
+                        <!-- <field name="state" invisible="1"/> -->
+                        
+                    </group>
+                      <notebook colspan="4" >
+                         <page string="les abonnements" >
+                            <field name="inscription">
+                                    <tree editable="top" colors="red:etat==False ; green:etat==True" toolbar="1">
+                                        <field name="date_debut"/>
+                                        <field name="date_fin"/>
+                                        <field name="act_id"/>
+                                        <field name="tarif"/>
+                                        <field name="etat" invisible="1"/>
+                                        <field name="reste"/>
+                                    </tree>
+                                    <form>
+                                            <group>
+                                                <field name="date_debut"/>
+                                                <field name="date_fin"/>
+                                                <field name="act_id"/>
+                                                <field name="tarif"/>
+                                                <field name="reste"/>
+                                            </group>
+
+                                    </form>
+                            </field>
+                               <group class="oe_subtotal_footer oe_right" attrs="{'invisible': [('etat','=', 'inactif')]}">
+                                <field name="paye" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                               
+                                <field name="reste_tarif"  widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="total" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                
+                            </group>
+                             <group>
+                                 
+                            </group>
+                            <div class="oe_clear">
+                               
+                            </div>
+                         </page>
+                        <page string="Pointages" >
+                             <field name="point">
+                                <tree>
+                                        <field name="date"/>
+                                        <field name="insc_id"/>
+                                       
+                                    </tree>
+                                    <form>
+                                            <group>
+                                                <field name="date"/>
+                                                <field name="insc_id"/>
+                                            </group>
+
+                                    </form>
+
+                             </field>
+                        </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+
+    <record model="ir.ui.view" id="view_adherent_adherent_tree">
+        <field name="name">adherent.adherent.tree</field>
+        <field name="model">adherent.adherent</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="adherent.adherent" colors="red:etat=='inactif' ; green:etat=='actif'" >
+                <field name="cin"/>
+                <field name="name"/>
+                <field name="prenom"/>
+                <field name="age"/>
+                <field name="telephone"/>
+                <field name="etat" invisible="1"/>
+                <field name="sexe"/>
+                <field name="adresse"/>
+
+            </tree>
+        </field>
+    </record>
+
+        <record model="ir.ui.view" id="resource_kanban_view">
+    <field name="name">adherent.adherent.Kabnan</field>
+    <field name="model">adherent.adherent</field>
+    <field name="type">kanban</field>
+    <field name="arch" type="xml">
+        <kanban  >
+                <field name="photo" widget="image"/>
+                <field name="cin"/>
+                <field name="name"/>
+                <field name="prenom"/>
+                <field name="age"/>
+                <field name="telephone"/>
+                <field name="color"/>
+                <field name="nbr_insc"/>
+                <field name="etat"/>
+                <field name="inscription"/>
+                    <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_project oe_kanban_global_click oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} ">
+                            <div class="oe_dropdown_toggle oe_dropdown_kanban"> 
+                                <span class="oe_e">í</span>
+                                <ul class="oe_dropdown_menu">
+                                    <t t-if="widget.view.is_action_enabled('edit')"><li><a type="edit">Edit...</a></li></t>
+                                    <t t-if="widget.view.is_action_enabled('delete')"><li><a type="delete">Delete</a></li></t>
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="oe_kanban_content">
+                                <div><b>Nom : <field name="name"/></b></div>
+                                 <div><b>Prénom : <field name="prenom"/></b></div>
+                                <div>
+                                     <div><b>cin : <field name="cin"/></b></div>
+                                     <div><b>Téléphone : <field name="telephone"/></b></div>
+                                    
+                                </div>
+                                
+                                <div class="oe_kanban_footer_left" style="margin-top:5px;">
+                                </div>
+                                    <div class="oe_kanban_bottom_right p">
+                                        <div class="photo">
+                                            <img t-att-src="kanban_image('adherent.adherent', 'photo', record.id.value)" width="50" height="50" class="oe_kanban_avatar pull-right"/>
+                                         </div>
+                                        <div class="pull-left">
+                                            <strong><field name="nbr_insc"/> Abonnement(s) </strong>
+                                              
+                                           
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="oe_clear"></div>
+                        </div>
+                    </t>
+                    </templates>
+                </kanban>
+            </field>
+         </record>
+
+        <record id="view_adherent_search_form" model="ir.ui.view">
+            <field name="name">adh.adh.search.form</field>
+            <field name="model">adherent.adherent</field>
+            <field name="arch" type="xml">
+               <search string="Abonnements">
+                    <field name="name"/>
+                   
+                   
+                    <filter string="Actifs" domain="[('etat','=','actif')]"/>
+                    <filter string="Inactifs" domain="[('etat','=','inactif')]"/>
+                    <filter string="Hommes" domain="[('sexe','=','homme')]"/>
+                    <filter string="Femmes" domain="[('sexe','=','femme')]"/>
+                    <separator/>
+                    
+                </search>
+            </field>
+        </record>
+
+
+    <record model="ir.actions.act_window" id="action_adherent_adherent">
+        <field name="name">Adherent</field>
+        <field name="res_model">adherent.adherent</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,form,tree</field>
+    </record>
+    
+    
+    <!--<menuitem name="Adherent/Adherent" id="menu_adherent_adherent" action="action_adherent_adherent"/>
+        -->
+    <menuitem id="menu" name="club sportif"
+    sequence="1" />
+    <menuitem id="idssousmenu" parent="menu" name="Les adherents" />
+    <menuitem name="Adherent" id="gest_adh"  parent="idssousmenu" action="action_adherent_adherent"/>
+
+
+
+
+    
+
+      
+
+    <!--<menuitem name="Abonnement/Abonnement" id="menu_abonnement_abonnement" action="action_abonnement_abonnement"/>
+     -->
+     
+     <menuitem id="idssousmenuabn" 
+        parent="menu" 
+        name="Les abonnements"
+        sequence="10" />
+     <menuitem id="sub" name="Les abonnements" parent="idssousmenuabn" sequence="1"/>
+     <menuitem name="Les abonnements"
+                id="gest_insc"
+                parent="sub"
+                action="action_isnc_insc"
+                sequence="2"/>
+
+
+
+     <menuitem name="Les abonnements expirés"
+                id="gest_insc_inactif"
+                parent="sub"
+                action="action_isnc_insc_inactif"
+                sequence="3"/>
+
+   
+    <record model="ir.ui.view" id="view_activite_activite_form">
+        <field name="name">activite.activite.form</field>
+        <field name="model">activite.activite</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+           <form string="activite.activite">
+                
+            
+                <sheet>
+                   <group>
+                  
+                        <div>
+                        <h2><label  string="activites"/></h2>
+                           <group colspan="4" col="4">
+                               
+                                <field name="nom"/>
+                                <field name="tarif"/>
+                            </group>
+                            
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_activite_activite_tree">
+        <field name="name">activite.activite.tree</field>
+        <field name="model">activite.activite</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="activite.activite">
+                 <field name="nom"/>
+                 <field name="tarif"/>
+
+                 
+
+            </tree>
+        </field>
+    </record>
+
+   
+
+
+
+    
+
+      <record model="ir.actions.act_window" id="action_activite_activite">
+        <field name="name">Activite</field>
+        <field name="res_model">activite.activite</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--<menuitem name="Activite/Activite" id="menu_activite_activite" action="action_activite_activite"/>
+        -->
+     <menuitem id="idssousmenuact" parent="menu" name="Les activités" />
+     <menuitem name="Activité" id="gest_act"  parent="idssousmenuact" action="action_activite_activite"/>
+
+     <record id="view_point_calendar" model="ir.ui.view">
+            <field name="name">Pointage</field>
+            <field name="model">point.point</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <calendar string="pointage"  date_start="date" color="adh_id" >
+                    <field name="insc_id" />
+
+                </calendar>
+            </field>
+        </record>
+
+
+
+    <record model="ir.ui.view" id="view_point_point_form">
+        <field name="name">point.point.form</field>
+        <field name="model">point.point</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+           <form string="point.point">
+                
+            
+                <sheet>
+                   <group>
+                  
+                        <div>
+                        <h2><label  string="pointage"/></h2>
+                           <group colspan="4" col="4">
+                                <field name="date" invisible="1"/>
+                                <field name="adh_id"/>
+                                <field name="insc_id" options="{'no_create': True}"/>
+                            </group>
+                            
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_pointage">
+        <field name="name">Pointage</field>
+        <field name="res_model">point.point</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">calendar,form,tree</field>
+    </record>
+
+
+    <record model="ir.ui.view" id="view_point_point_tree">
+        <field name="name">point.point.tree</field>
+        <field name="model">point.point</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="point.point">
+                 <field name="date" invisible="1"/>
+                <field name="adh_id"/>
+                <field name="insc_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="idssousmenupoint" parent="menu" name="Pointage" />
+
+ <record model="ir.actions.act_window" id="action_stat">
+        <field name="name">Statistiques</field>
+        <field name="res_model">insc.insc</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+      <menuitem id="idssousmenupoint" parent="menu" name="Pointage" />
+     <menuitem name="Pointage" id="gest_point"  parent="idssousmenupoint" action="action_pointage"/>
+
+
+      <menuitem id="idssousmenustat" parent="menu" name="Statistiques" />
+     <menuitem name="Statistiques" id="gest_stat"  parent="idssousmenustat" action="action_stat"/>
+
+
+       
+</data>
+</openerp>
